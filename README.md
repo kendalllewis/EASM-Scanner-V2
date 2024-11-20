@@ -58,11 +58,12 @@ EASMscanner is built for flexibility, allowing users to conduct multi-protocol s
 
 EASMscanner is designed for ease of use with extensive command-line options:
 
-python easmscanner.py --ip_range 192.168.0.0/24 --rate 500 --nmap_options "-A -Pn" --scan_level 3
+python3 easmscanner.py --ip_range 192.168.0.0/24 --rate 500 --nmap_options "-A -Pn" --scan_level 3
+
 
 Or, scan multiple ranges from an input file:
 
-python easmscanner.py --input_file targets.txt --rate 1000
+python3 easmscanner.py --input_file targets.txt --rate 1000
 ![image](https://github.com/user-attachments/assets/c3e62911-5c0c-46bd-9bc5-95b6c92aabe8)
 
 **Acknowledgments**
