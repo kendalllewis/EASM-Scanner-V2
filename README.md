@@ -65,3 +65,10 @@ Or, scan multiple ranges from an input file:
 python easmscanner.py --input_file targets.txt --rate 1000
 ![image](https://github.com/user-attachments/assets/c3e62911-5c0c-46bd-9bc5-95b6c92aabe8)
 
+**Acknowledgments**
+
+Special thanks to the contributors and open-source projects (Masscan, Nmap, WhatWeb, SQLite) that made this release possible.
+
+**Suggestions or Feedback**
+
+Let us know how EASMSCanner v2.0 performs for you! Feedback and feature requests are always welcome.
