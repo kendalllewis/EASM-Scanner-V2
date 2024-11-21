@@ -126,7 +126,7 @@ def run_dig(ip):
 def merge_results():
     root = ET.Element("scan_results")
     for file in os.listdir():
-        if file.endswith(".xml") and ("masscan" in file or "nmap" in file):
+        if file.endswith(".xml") and ("masscan" in file or "nmap" in file or "whatweb" in file):
             try:
                 tree = ET.parse(file)
                 root.append(tree.getroot())
@@ -144,7 +144,6 @@ def setup_argparse():
     parser.add_argument("--rate", default=1000, help="Rate of packets for masscan")
     parser.add_argument("--nmap_options", default="", help="Additional Nmap options")
     parser.add_argument("--scan_level", default=3, type=int, help="WhatWeb scan level (1-4)")
-    parser.add_argument("--passive_os", action="store_true", help="Enable passive OS fingerprinting with p0f")
     return parser.parse_args()
 
 # Read IP ranges from argument or file
@@ -186,7 +185,7 @@ def create_database():
                         updated_at DATETIME DEFAULT CURRENT_TIMESTAMP,
                         FOREIGN KEY(host_id) REFERENCES hosts(id))''')
 
-    # WhatWeb data table
+    # Whatweb table
     cursor.execute('''CREATE TABLE IF NOT EXISTS whatweb (
                         id INTEGER PRIMARY KEY,
                         host_id INTEGER,
@@ -372,8 +371,6 @@ def main():
 
     if ptr_targets:
         run_whatweb(ptr_targets, args.scan_level)
-    if args.passive_os:
-        run_p0f(args.ip_range)
 
     # Step 5: Merge results
     merge_results()
