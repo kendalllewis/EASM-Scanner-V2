@@ -14,7 +14,7 @@ def read_art_file():
     except FileNotFoundError:
         print("[!] art.txt file not found.")
 
-# List of common UDP ports for scanning
+# List of common UDP ports for scanning, which may be modified to add more
 COMMON_UDP_PORTS = "53,67,68,69,123,137,161,162,500,514,520,623,1900,3391,4500,5353,5683"
 
 # Run Masscan for TCP/UDP
