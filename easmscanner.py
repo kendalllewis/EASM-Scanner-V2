@@ -3,6 +3,7 @@ import subprocess
 import os
 import concurrent.futures
 import sqlite3
+import glob
 import xml.etree.ElementTree as ET
 
 # Function to read contents of a file and print
@@ -241,6 +242,17 @@ def create_triggers():
     conn.commit()
     conn.close()
 
+def clean_up_temp_files():
+    # Define patterns for temporary files to delete
+    temp_file_patterns = ["masscan_output_*.xml", "nmap_output_*.xml", "whatweb_output_*.xml", "nmap_indirect_*.xml"]
+    for pattern in temp_file_patterns:
+        for file in glob.glob(pattern):
+            try:
+                os.remove(file)
+                print(f"[+] Removed temporary file: {file}")
+            except OSError as e:
+                print(f"[!] Failed to remove file {file}: {e}")
+
 def parse_xml_to_db(xml_file):
     # Connect to the SQLite3 database
     conn = sqlite3.connect("scan_results.db")
@@ -344,6 +356,9 @@ def parse_xml_to_db(xml_file):
     # Commit changes and close the connection
     conn.commit()
     conn.close()
+
+    # Cleanup after parsing is done
+    clean_up_temp_files()
 
 # Main function
 def main():
