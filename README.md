@@ -2,7 +2,7 @@
 
 **Overview**
 
-EASMscanner v2.0 is a comprehensive and versatile External Attack Surface Management tool designed to streamline the discovery, scanning, and analysis of network assets. This release introduces several powerful features, enhanced automation, and improved performance to meet the demands of modern security teams.
+EASMscanner v2.0 is a comprehensive and versatile External Attack Surface Scanner and Management tool designed to streamline the discovery, scanning, and analysis of network assets. This release introduces several powerful features, enhanced automation, and improved performance to meet the demands of modern security teams.
 
 EASMscanner is built for flexibility, allowing users to conduct multi-protocol scans, analyze web services, and integrate results into centralized databases for advanced data analysis and visualization.
 
