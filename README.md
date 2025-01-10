@@ -66,6 +66,10 @@ Or, scan multiple ranges from an input file:
 python3 easmscanner.py --input_file targets.txt --rate 1000
 ![image](https://github.com/user-attachments/assets/c3e62911-5c0c-46bd-9bc5-95b6c92aabe8)
 
+Once your database is created, you are free to use within any reporting or dashboard tool you would like. I love the Grafana route with Docker:
+![image](https://github.com/user-attachments/assets/a9f8083f-293d-42aa-96bb-3c50dd182607)
+
+
 **Acknowledgments**
 
 Special thanks to the contributors and open-source projects (Masscan, Nmap, WhatWeb, SQLite) that made this release possible.
