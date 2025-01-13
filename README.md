@@ -57,6 +57,8 @@ EASMscanner is built for flexibility, allowing users to conduct multi-protocol s
 **Usage**
 
 EASMscanner is designed for ease of use with extensive command-line options:
+![image](https://github.com/user-attachments/assets/ed9933aa-4c50-48db-87c9-c2e4d2bde70d)
+
 
 python3 easmscanner.py --ip_range 192.168.0.0/24 --rate 500 --nmap_options "-A -Pn" --scan_level 3
 
