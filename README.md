@@ -12,8 +12,8 @@ EASMscanner is built for flexibility, allowing users to conduct multi-protocol s
 
 - Masscan: High-speed discovery of TCP and UDP ports.
 - Nmap: Granular port analysis and indirect UDP scans, focusing on open ports and service identification.
+- Reverse DNS Lookup: Automated DNS resolution using Dig.
 - WhatWeb: Web service fingerprinting with enhanced multi-threaded support.
-- Reverse DNS Lookup: Automated DNS resolution using dig.
 
 2. Automated Data Parsing and Enrichment
 
