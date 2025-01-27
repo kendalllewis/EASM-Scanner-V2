@@ -19,6 +19,7 @@ EASMscanner is built for flexibility, allowing users to conduct multi-protocol s
 
 - XML parsing for both Masscan and Nmap outputs, seamlessly integrated with database storage.
 - Support for SSL/TLS certificate analysis, extracting issuer, subject, validity, and expiration details.
+- Support for Whatweb response data: passively gathering information about the technologies used on a website.
 
 3. Centralized SQLite Database
 
