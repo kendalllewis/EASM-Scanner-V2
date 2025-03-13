@@ -70,6 +70,7 @@ python3 easmscanner.py --input_file targets.txt --rate 1000
 ![image](https://github.com/user-attachments/assets/c3e62911-5c0c-46bd-9bc5-95b6c92aabe8)
 
 Once your database is created, you are free to use within any reporting or dashboard tool you would like. I love the Grafana route with Docker. Once Grafana is up and running, you can add your EASM DB as a data source. Just go to the main menu in Grafana, then data sources, and then add SQLite with the path to your EASM database. You will then need to setup up sql queries for each dashboard component:
+![image](https://github.com/user-attachments/assets/5b609f30-de8d-4fc1-84ab-cc7442ff3680)
 
 
 
